@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Card, Divider, Select, Button, InputNumber, Tooltip } from 'antd';
 import pinyin from 'pinyin';
 import './AbilityPanel.less';
-import { damageWithStatus, attrWithStatus } from '../util/status';
+import { attrWithStatus } from '../util/status';
 
 export default class AbilityPanel extends Component {
   state = {
@@ -100,7 +100,7 @@ export default class AbilityPanel extends Component {
   }
 
   render() {
-    const { pokemon: { name, status }, moves, handleSelectMove, calculateDamage, options } = this.props;
+    const { pokemon: { name }, moves, handleSelectMove, calculateDamage, options } = this.props;
     // TODO 增加显示先后手（根据实时速度、技能优先级）
     return (
       <Card
